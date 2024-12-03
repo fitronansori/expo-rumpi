@@ -1,4 +1,5 @@
 import CustomButton from "@/components/CustomButton";
+import Logo from "@/components/Logo";
 import { images } from "@/constants";
 import { router } from "expo-router";
 import { StatusBar } from "expo-status-bar";
@@ -12,11 +13,7 @@ export default function Welcome() {
 
       <ScrollView contentContainerStyle={{ height: "100%" }}>
         <View className="size-full items-center justify-center gap-5 px-4">
-          <Image
-            source={images.logo}
-            resizeMode="contain"
-            className="h-20 w-32"
-          />
+          <Logo />
 
           <Image
             source={images.cards}
@@ -24,27 +21,21 @@ export default function Welcome() {
             className="h-80 w-full max-w-96"
           />
 
-          <View className="relative">
+          <View>
             <Text className="text-center text-3xl font-bold text-white">
               Bagikan momen terbaikmu dan ciptakan kenangan indah bersama{" "}
-              <Text className="text-secondary-200">Aora</Text>
+              <Text className="text-secondary-200">Rumpi</Text>
             </Text>
-
-            <Image
-              source={images.path}
-              resizeMode="contain"
-              className="absolute -bottom-4 right-16 h-4 w-[136px]"
-            />
           </View>
 
           <Text className="font-pregular text-center text-base text-gray-100">
             Ketika kreativitas bertemu inovasi, mulailah perjalanan eksplorasi
-            tanpa batas bersama aora.
+            tanpa batas bersama rumpi.
           </Text>
 
           <CustomButton
             onPress={() => router.push("/sign-in")}
-            title="Daftar Menggunakan Email"
+            title="Login Menggunakan Email"
             containerStyle="w-full"
           />
         </View>
